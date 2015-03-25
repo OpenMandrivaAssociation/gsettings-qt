@@ -17,6 +17,8 @@ URL:		https://github.com/papyros/gsettings-qt
 # bzr export --root=gsettings-qt-0.0.0-$(date +%Y%m%d) ../gsettings-qt-0.0.0-$(date +%Y%m%d).tar.gz
 Source0:	%{name}-%{version}-%{snap}.tar.gz
 BuildRequires:	qt5-devel
+BuildRequires:	pkgconfig(Qt5QuickTest)
+BuildRequires:	pkgconfig(Qt5Qml)
 
 %description
 Qml bindings for GSettings.
