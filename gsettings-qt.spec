@@ -41,7 +41,7 @@ This package includes the development files for %{name}.
 
 %prep
 %setup -qn %{name}-%{version}-%{snap}
-%apply_patches
+%autopatch -p1
 
 %build
 %qmake_qt5
