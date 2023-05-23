@@ -8,17 +8,25 @@
 
 Summary:	Qml bindings for GSettings
 Name:		gsettings-qt
-Version:	0.0.0
-Release:	0.%{snap}.1
+Version:	0.2
+Release:	1
 License:	GPLv2
 Group:		Graphical desktop/Other
 URL:		https://github.com/papyros/gsettings-qt
-# bzr branch lp:gsettings-q
-# bzr export --root=gsettings-qt-0.0.0-$(date +%Y%m%d) ../gsettings-qt-0.0.0-$(date +%Y%m%d).tar.gz
-Source0:	%{name}-%{version}-%{snap}.tar.gz
+Source0:  https://gitlab.com/ubports/development/core/gsettings-qt/-/archive/v%{version}/gsettings-qt-v%{version}.tar.bz2
 BuildRequires:	qt5-devel
 BuildRequires:	pkgconfig(Qt5QuickTest)
 BuildRequires:	pkgconfig(Qt5Qml)
+BuildRequires:  pkgconfig(Qt5Core)
+BuildRequires:  pkgconfig(Qt5Gui)
+BuildRequires:  pkgconfig(Qt5Network)
+BuildRequires:  pkgconfig(Qt5OpenGL)
+BuildRequires:  pkgconfig(Qt5Quick)
+BuildRequires:  pkgconfig(Qt5Sql)
+BuildRequires:  pkgconfig(Qt5Widgets)
+BuildRequires:  pkgconfig(gio-2.0)
+BuildRequires:  pkgconfig(glib-2.0)
+BuildRequires:  pkgconfig(gobject-2.0)  
 
 %description
 Qml bindings for GSettings.
@@ -40,7 +48,7 @@ Provides:	%{name}-devel = %{EVRD}
 This package includes the development files for %{name}.
 
 %prep
-%setup -qn %{name}-%{version}-%{snap}
+%setup -qn %{name}-%{version}
 %autopatch -p1
 
 %build
