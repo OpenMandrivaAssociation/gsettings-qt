@@ -48,7 +48,7 @@ Provides:	%{name}-devel = %{EVRD}
 This package includes the development files for %{name}.
 
 %prep
-%setup -qn %{name}-%{version}
+%setup -qn %{name}-v%{version}
 %autopatch -p1
 
 %build
