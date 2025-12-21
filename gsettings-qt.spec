@@ -14,6 +14,7 @@ License:	GPLv2
 Group:		Graphical desktop/Other
 URL:		https://github.com/papyros/gsettings-qt
 Source0:  https://gitlab.com/ubports/development/core/gsettings-qt/-/archive/v%{version}/gsettings-qt-v%{version}.tar.bz2
+BuildRequires:	make
 BuildRequires:	qt5-devel
 BuildRequires:	pkgconfig(Qt5QuickTest)
 BuildRequires:	pkgconfig(Qt5Qml)
